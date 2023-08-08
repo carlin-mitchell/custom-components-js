@@ -1,2 +1,29 @@
+@use "../vars" as *;
+@use "../breakpoints" as screen;
+
 .navbar {
+  .nav-links {
+    justify-content: start;
+    @include screen.xs {
+      display: none;
+    }
+    @include screen.sm {
+      display: none;
+    }
+    @include screen.md {
+      display: flex;
+    }
+  }
+
+  li:last-child {
+    margin-right: 0;
+  }
+  .menu-button {
+    @include screen.sm {
+      display: initial;
+    }
+    @include screen.md {
+      display: none;
+    }
+  }
 }

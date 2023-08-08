@@ -1,6 +1,7 @@
 // COMPONENT IMPORTS
 import Element from "../Element";
 import NavLinks from "./NavLinks";
+import MenuContainer from "./MenuButton";
 
 // LOGIC IMPORTS
 //
@@ -21,10 +22,10 @@ const NavBar = () => {
     innerText: "I made this myself",
   });
 
-  const Container = (props, children) =>
+  const Container = (classString, children) =>
     Element(
       "div",
-     {className: },
+      { className: `${classString} container` },
       // container children
       [...children]
     );
@@ -32,10 +33,14 @@ const NavBar = () => {
   const nav = Element(
     "nav",
     {
-      className: `container bg-primary text-white pt-1 pl-1 pr-1 flex-column`,
+      className: `container bg-primary text-white flex-column navbar`,
     },
     // nav children
-    [Container([siteHeader, tagline]), Container([NavLinks()])]
+    [
+      Container("p-1 flex-wrap", [siteHeader, tagline]),
+      Container("nav-links", [NavLinks()]),
+      Container("", [MenuContainer()]),
+    ]
   );
 
   return nav;

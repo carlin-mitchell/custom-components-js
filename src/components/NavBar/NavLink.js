@@ -17,7 +17,7 @@ const NavLink = (innerText, href) => {
     "li",
     {
       id: ``,
-      className: `bg-primary-light-1`,
+      className: `bg-primary-light-1 p-1 text-uppercase bg-hover-primary-dark-2 cursor-pointer mr-1`,
     },
     // children
     [a(innerText, href)]

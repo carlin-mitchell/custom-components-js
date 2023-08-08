@@ -19,7 +19,9 @@ const Component = (headerText, component, addHr = false) => {
     className: `m-1`,
   });
 
-  const section = Element("div", {});
+  const section = Element("div", {
+    className: `container flex-column`,
+  });
   section.appendChild(header);
 
   if (component) {

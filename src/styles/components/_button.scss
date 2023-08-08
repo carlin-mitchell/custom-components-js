@@ -20,3 +20,13 @@
     border: $base-border-width * 2 solid $val;
   }
 }
+
+.btn {
+  &:hover {
+    scale: 1.025;
+    cursor: pointer;
+  }
+  &:active {
+    scale: 1;
+  }
+}

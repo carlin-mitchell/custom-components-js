@@ -14,10 +14,16 @@ const NavLinks = () => {
   const navLinks = Element(
     "ul",
     {
-      className: ``,
+      className: `container nav-links`,
     },
     // children
-    [NavLink("contact", "#")]
+    [
+      NavLink("contact", "#"),
+      NavLink("home", "#"),
+      NavLink("about", "#"),
+      NavLink("news", "#"),
+      NavLink("pricing", "#"),
+    ]
   );
   return navLinks;
 };

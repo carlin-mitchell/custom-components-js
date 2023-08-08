@@ -1,12 +1,17 @@
 @use "./vars" as *;
 
-body,
-html {
+html,
+body {
   min-height: 100%;
+  position: relative;
 }
-
 body {
   font-family: $main-font-stack;
+}
+
+#content {
+  min-height: 100%;
+  position: relative;
 }
 
 * {
@@ -31,4 +36,9 @@ hr {
 
 img {
   max-width: 100%;
+}
+
+a {
+  color: inherit;
+  font-style: inherit;
 }
