@@ -1,6 +1,5 @@
 // COMPONENT IMPORTS
 import Element from "../Element";
-import TestHeader from "./TestHeader/TestHeader";
 
 // LOGIC IMPORTS
 //

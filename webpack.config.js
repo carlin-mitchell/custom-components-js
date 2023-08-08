@@ -44,9 +44,9 @@ module.exports = {
     new PurgeCSSPlugin({
       paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
     }),
+    new CssMinimizerPlugin(),
   ],
   optimization: {
-    minimizer: [new CssMinimizerPlugin()],
     minimize: true,
   },
   cache: false,
