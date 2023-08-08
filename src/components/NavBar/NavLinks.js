@@ -1,5 +1,6 @@
 // COMPONENT IMPORTS
 import Element from "../Element";
+import NavLink from "./NavLink";
 
 // LOGIC IMPORTS
 //
@@ -9,17 +10,16 @@ import Element from "../Element";
 //   //
 // }
 
-const Component = () => {
-  const parentElement = Element(
-    "div",
+const NavLinks = () => {
+  const navLinks = Element(
+    "ul",
     {
-      id: ``,
       className: ``,
     },
     // children
-    []
+    [NavLink("contact", "#")]
   );
-  return parentElement;
+  return navLinks;
 };
 
-export default Component;
+export default NavLinks;

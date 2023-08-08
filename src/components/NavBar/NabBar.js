@@ -1,5 +1,6 @@
 // COMPONENT IMPORTS
 import Element from "../Element";
+import NavLinks from "./NavLinks";
 
 // LOGIC IMPORTS
 //
@@ -15,22 +16,26 @@ const NavBar = () => {
     innerText: "Navbar.com",
   });
 
-  const container = Element(
-    "div",
-    {
-      className: `container`,
-    },
-    // container children
-    [siteHeader]
-  );
+  const tagline = Element("p", {
+    className: ``,
+    innerText: "I made this myself",
+  });
+
+  const Container = (props, children) =>
+    Element(
+      "div",
+     {className: },
+      // container children
+      [...children]
+    );
 
   const nav = Element(
     "nav",
     {
-      className: `container bg-primary text-white p-1`,
+      className: `container bg-primary text-white pt-1 pl-1 pr-1 flex-column`,
     },
-    // children
-    [container]
+    // nav children
+    [Container([siteHeader, tagline]), Container([NavLinks()])]
   );
 
   return nav;
