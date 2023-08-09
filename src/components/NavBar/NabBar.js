@@ -2,6 +2,7 @@
 import Element from "../Element";
 import NavLinks from "./NavLinks";
 import MenuContainer from "./MenuButton";
+import MobileMenu from "./MobileMenu";
 
 // LOGIC IMPORTS
 //
@@ -47,7 +48,7 @@ const NavBar = () => {
     "div",
     { className: `nav-wrapper` },
     // children
-    [nav]
+    [nav, MobileMenu()]
   );
 
   return navWrapper;

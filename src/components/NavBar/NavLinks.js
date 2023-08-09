@@ -10,12 +10,27 @@ import NavLink from "./NavLink";
 //   //
 // }
 
-const linkElements = [
-  NavLink("contact", "#"),
-  NavLink("home", "#"),
-  NavLink("about", "#"),
-  NavLink("news", "#"),
-  NavLink("pricing", "#"),
+const linkElementInfo = [
+  {
+    innerText: "contact",
+    href: "#",
+  },
+  {
+    innerText: "about",
+    href: "#",
+  },
+  {
+    innerText: "pricing",
+    href: "#",
+  },
+  {
+    innerText: "links",
+    href: "#",
+  },
+  {
+    innerText: "events",
+    href: "#",
+  },
 ];
 
 const NavLinks = () => {
@@ -25,7 +40,7 @@ const NavLinks = () => {
       className: `container nav-links`,
     },
     // children
-    [...linkElements]
+    linkElementInfo.map((obj) => NavLink(obj))
   );
   return navLinks;
 };

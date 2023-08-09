@@ -1,6 +1,12 @@
 @use "../vars" as *;
 @use "../breakpoints" as screen;
 
+.nav-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
 .navbar {
   .nav-links {
     justify-content: start;

@@ -9,7 +9,9 @@ import Element from "../Element";
 //   //
 // }
 
-const NavLink = (innerText, href) => {
+const NavLink = (props) => {
+  const { innerText } = props;
+  const { href } = props;
   const a = (innerText, href, className) =>
     Element("a", { innerText, href, className: `` });
 
