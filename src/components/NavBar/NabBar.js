@@ -34,7 +34,7 @@ const NavBar = () => {
   const nav = Element(
     "nav",
     {
-      className: `container bg-primary text-white flex-column navbar`,
+      className: `container bg-primary flex-column navbar`,
     },
     // nav children
     [
@@ -46,7 +46,7 @@ const NavBar = () => {
 
   const navWrapper = Element(
     "div",
-    { className: `nav-wrapper` },
+    { className: `nav-wrapper text-white` },
     // children
     [nav, MobileMenu()]
   );

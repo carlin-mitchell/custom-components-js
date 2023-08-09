@@ -5,9 +5,48 @@
   width: 100%;
   display: grid;
   grid-template-rows: auto auto;
+  overflow: hidden;
+}
+
+.mobile-menu {
+  .nav-links {
+    flex-direction: column;
+  }
+  li {
+    width: 100%;
+    margin: 0;
+  }
+  transform: translateY(-100%);
+}
+
+.menu-down {
+  animation: 1s ease-in-out forwards mobile-menu-down;
+}
+
+.menu-up {
+  animation: 1s ease-in forwards mobile-menu-up;
+}
+
+@keyframes mobile-menu-down {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes mobile-menu-up {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-1000%);
+  }
 }
 
 .navbar {
+  z-index: 2;
   .nav-links {
     justify-content: start;
     @include screen.xs {
@@ -20,7 +59,6 @@
       display: flex;
     }
   }
-
   li:last-child {
     margin-right: 0;
   }

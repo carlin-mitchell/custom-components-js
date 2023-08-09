@@ -2,12 +2,13 @@
 import Element from "../Element";
 import MenuIcon from "../Assets/menu-white.svg";
 // LOGIC IMPORTS
-//
+
+import ui from "../managers/uiManager";
 
 // COMPONENT METHODS
-// function someMethod() {
-//   //
-// }
+function someMethod() {
+  ui.toggleMobileMenu();
+}
 
 const MenuContainer = () => {
   const menuIcon = Element("img", {
@@ -18,6 +19,7 @@ const MenuContainer = () => {
     "button",
     {
       className: `menu-button m-1 btn bg-transparent border-none`,
+      onclick: someMethod,
     },
     //   children
     [menuIcon]
