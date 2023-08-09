@@ -43,7 +43,14 @@ const NavBar = () => {
     ]
   );
 
-  return nav;
+  const navWrapper = Element(
+    "div",
+    { className: `nav-wrapper` },
+    // children
+    [nav]
+  );
+
+  return navWrapper;
 };
 
 export default NavBar;

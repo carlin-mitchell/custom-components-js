@@ -10,6 +10,14 @@ import NavLink from "./NavLink";
 //   //
 // }
 
+const linkElements = [
+  NavLink("contact", "#"),
+  NavLink("home", "#"),
+  NavLink("about", "#"),
+  NavLink("news", "#"),
+  NavLink("pricing", "#"),
+];
+
 const NavLinks = () => {
   const navLinks = Element(
     "ul",
@@ -17,13 +25,7 @@ const NavLinks = () => {
       className: `container nav-links`,
     },
     // children
-    [
-      NavLink("contact", "#"),
-      NavLink("home", "#"),
-      NavLink("about", "#"),
-      NavLink("news", "#"),
-      NavLink("pricing", "#"),
-    ]
+    [...linkElements]
   );
   return navLinks;
 };
