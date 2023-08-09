@@ -1,4 +1,4 @@
-https://github.com/carlin-mitchell/boilerplate-webpack
+https://github.com/carlin-mitchell/custom-components-js
 
 # boilerplate-webpack
 
