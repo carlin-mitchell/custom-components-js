@@ -1,5 +1,5 @@
 https://github.com/carlin-mitchell/custom-components-js
 
-# boilerplate-webpack
+# custom-component-js
 
 # [View Live Site](https://)
