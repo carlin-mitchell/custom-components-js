@@ -3,7 +3,7 @@ import Element from "../Element";
 import MenuIcon from "../Assets/menu-white.svg";
 // LOGIC IMPORTS
 
-import ui from "../managers/uiManager";
+import ui from "../../managers/uiManager/uiManager";
 
 // COMPONENT METHODS
 function someMethod() {
