@@ -18,7 +18,7 @@ const MobileMenu = () => {
       className: `mobile-menu`,
     },
     // children
-    [NavLinks()]
+    [NavLinks(true)]
   );
   return menu;
 };
