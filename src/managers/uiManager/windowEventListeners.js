@@ -1,4 +1,5 @@
 import { mobileMenuUp } from "./mobileMenu-ui";
+import { debounce } from "../../utils";
 
 const breakPoints = {
   xs: 0,
@@ -9,15 +10,14 @@ const breakPoints = {
 };
 
 export function applyWindowListeners() {
-  window.onresize = function (e) {
+  window.onresize = debounce(function (e) {
     const { innerWidth } = e.target;
 
     if (innerWidth >= breakPoints.md) {
-      console.log(innerWidth);
       const mobileMenu = document.querySelector(".mobile-menu");
       if (mobileMenu.classList.contains("menu-down")) {
         mobileMenuUp();
       }
     }
-  };
+  });
 }
