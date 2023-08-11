@@ -110,7 +110,7 @@
 
 .dropdown:hover {
   .top-link::after {
-    content: "-";
+    content: "";
     margin-left: $base-margin * 0.5;
   }
   .dropdown-content {
