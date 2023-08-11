@@ -16,7 +16,7 @@ const NavLink = (props) => {
     Element("a", { innerText, href, className: `` });
 
   const navLink = Element(
-    "li",
+    "div",
     {
       id: ``,
       className: `bg-primary-light-1 p-1 text-uppercase bg-hover-primary-dark-2 cursor-pointer mr-1`,

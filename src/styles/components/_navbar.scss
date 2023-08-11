@@ -81,12 +81,13 @@
 .dropdown {
   position: relative;
   display: inline-block;
-  button {
+  .top-link {
     font-size: $base-font-size;
     position: relative;
+    display: inline-block;
   }
 
-  button::after {
+  .top-link::after {
     content: "+";
     position: absolute;
     right: $base-margin * 0.75;
@@ -96,20 +97,19 @@
     visibility: hidden;
     position: absolute;
     left: 0;
-    min-width: 8rem;
+    min-width: 10rem;
     z-index: 1;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     a {
       display: block;
-
       padding: $base-padding;
     }
   }
 }
 
 .dropdown:hover {
-  button::after {
+  .top-link::after {
     content: "-";
     margin-left: $base-margin * 0.5;
   }

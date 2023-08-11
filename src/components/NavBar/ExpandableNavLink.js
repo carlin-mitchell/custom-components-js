@@ -18,12 +18,12 @@ const ExpandableNavLink = (props) => {
       className: `${className ? className : ""}`,
     });
 
-  const button = Element(
-    "button",
+  const topLink = Element(
+    "a",
     {
       innerText: props.innerText,
       className:
-        "pt-1 pr-2 pb-1 pl-1 bg-transparent text-white border-none text-uppercase cursor-pointer ",
+        "top-link pt-1 pr-2 pb-1 pl-1 bg-transparent text-white border-none text-uppercase cursor-pointer ",
     },
     []
   );
@@ -45,7 +45,7 @@ const ExpandableNavLink = (props) => {
         "bg-primary-light-1 text-uppercase bg-hover-primary-dark-2 cursor-pointer mr-1",
     },
     //children
-    [button, dropDownContent]
+    [topLink, dropDownContent]
   );
 
   return expandableNavLink;
