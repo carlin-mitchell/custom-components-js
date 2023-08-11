@@ -11,12 +11,21 @@ import NavLink from "./NavLink";
 
 const ExpandableNavLink = (props) => {
   const subLinkObjects = props.subLinkObjects ? props.subLinkObjects : [];
+
+  const icon = Element("i", {
+    className: "icon icon-github-mark text-white font-md ml-1",
+  });
+
   const a = (innerText, href, className) =>
-    Element("a", {
-      innerText,
-      href,
-      className: `${className ? className : ""}`,
-    });
+    Element(
+      "a",
+      {
+        innerText,
+        href,
+        className: `${className ? className : ""}`,
+      },
+      innerText.toLowerCase() === "github repo" ? [icon] : []
+    );
 
   const topLink = Element(
     "a",

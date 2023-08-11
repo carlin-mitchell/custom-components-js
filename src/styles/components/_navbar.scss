@@ -11,7 +11,7 @@
   .nav-links {
     flex-direction: column;
   }
-  li {
+  div {
     width: 100%;
     margin: 0;
   }
@@ -97,7 +97,7 @@
     visibility: hidden;
     position: absolute;
     left: 0;
-    min-width: 10rem;
+    min-width: max-content;
     z-index: 1;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;

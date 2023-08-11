@@ -14,11 +14,9 @@ import NavBar from "../NavBar/NabBar";
 
 const Content = () => {
   const content = Element("div", { id: "content" });
-  const i = Element("i", {
-    className: "icon icon-github-mark text-red font-xl ",
-  });
+
   content.appendChild(ComponentSection("Navbar With Dropdown", NavBar(), true));
-  content.appendChild(i);
+
   return content;
 };
 

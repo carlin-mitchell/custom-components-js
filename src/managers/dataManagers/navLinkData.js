@@ -11,8 +11,8 @@ export const navLinkElementInfo = [
         innerText: "Github Live",
         href: "https://carlin-mitchell.github.io/custom-components-js/",
       },
-      { innerText: "Link 3", href: "#" },
-      { innerText: "Link 4", href: "#" },
+      { innerText: "Sub Link 3", href: "#" },
+      { innerText: "Sub Link 4", href: "#" },
     ],
   },
   {
@@ -27,14 +27,20 @@ export const navLinkElementInfo = [
     innerText: "links",
     href: "#",
     subLinkObjects: [
-      { innerText: "Link 1", href: "#" },
-      { innerText: "Link 2", href: "#" },
-      { innerText: "Link 3", href: "#" },
-      { innerText: "Link 4", href: "#" },
+      { innerText: "Sub Link 1", href: "#" },
+      { innerText: "Sub Link 2", href: "#" },
+      { innerText: "Sub Link 3", href: "#" },
+      { innerText: "Sub Link 4", href: "#" },
     ],
   },
   {
     innerText: "events",
     href: "#",
+    subLinkObjects: [
+      { innerText: "Sub Link 1", href: "#" },
+      { innerText: "Sub Link 2", href: "#" },
+      { innerText: "Sub Link 3", href: "#" },
+      { innerText: "Sub Link 4", href: "#" },
+    ],
   },
 ];
