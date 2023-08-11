@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "icons";
+  src: url("../global-assets/fonts/icons.eot?rl7h8a");
+  src: url("../global-assets/fonts/icons.eot?rl7h8a#iefix")
+      format("embedded-opentype"),
+    url("../global-assets/fonts/icons.ttf?rl7h8a") format("truetype"),
+    url("../global-assets/fonts/icons.woff?rl7h8a") format("woff"),
+    url("../global-assets/fonts/icons.svg?rl7h8a#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icons" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-up-triangle:before {
+  content: "\e900";
+}
+.icon-github-mark:before {
+  content: "\e901";
+}
+.icon-plus-sign .path1:before {
+  content: "\e902";
+  color: rgb(255, 255, 255);
+}
+.icon-plus-sign .path2:before {
+  content: "\e903";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-plus-sign .path3:before {
+  content: "\e904";
+  margin-left: -1em;
+  color: rgb(33, 37, 41);
+}
+.icon-menu-white:before {
+  content: "\e905";
+  color: #fff;
+}
+.icon-pencil:before {
+  content: "\e906";
+}
