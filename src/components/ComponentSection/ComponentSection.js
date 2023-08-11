@@ -15,12 +15,18 @@ const Component = (headerText, component, addHr = false) => {
     innerText: headerText,
   });
 
-  const hr = Element("hr", {
-    className: `m-1`,
-  });
+  component = Element("div", { className: `component-body` }, [component]);
+
+  const hrDiv = Element(
+    "div",
+    {
+      className: `p-1 hr-div `,
+    },
+    [Element("hr")]
+  );
 
   const section = Element("div", {
-    className: `container flex-column`,
+    className: `component-section`,
   });
   section.appendChild(header);
 
@@ -28,7 +34,7 @@ const Component = (headerText, component, addHr = false) => {
     section.appendChild(component);
   }
   if (addHr) {
-    section.appendChild(hr);
+    component.appendChild(hrDiv);
   }
   return section;
 };

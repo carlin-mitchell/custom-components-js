@@ -4,36 +4,12 @@ import NavLink from "./NavLink";
 import ExpandableNavLink from "./ExpandableNavLink";
 
 // LOGIC IMPORTS
-//
+import { navLinkElementInfo } from "../../managers/dataManagers/navLinkData";
 
 // COMPONENT METHODS
 // function someMethod() {
 //   //
 // }
-
-const linkElementInfo = [
-  {
-    innerText: "contact",
-    href: "#",
-    expandable: true,
-  },
-  {
-    innerText: "about",
-    href: "#",
-  },
-  {
-    innerText: "pricing",
-    href: "#",
-  },
-  {
-    innerText: "links",
-    href: "#",
-  },
-  {
-    innerText: "events",
-    href: "#",
-  },
-];
 
 const NavLinks = (isMobileMenu) => {
   isMobileMenu = isMobileMenu ? true : false;
@@ -43,8 +19,10 @@ const NavLinks = (isMobileMenu) => {
       className: `container nav-links`,
     },
     // children
-    linkElementInfo.map((obj) =>
-      obj.expandable && !isMobileMenu ? ExpandableNavLink(obj) : NavLink(obj)
+    navLinkElementInfo.map((obj) =>
+      obj.subLinkObjects && !isMobileMenu
+        ? ExpandableNavLink(obj)
+        : NavLink(obj)
     )
   );
   return navLinks;

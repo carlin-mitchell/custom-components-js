@@ -1,0 +1,19 @@
+.component-section {
+  display: grid;
+  .component-body {
+    grid-row: 2 / 4;
+    display: grid;
+    grid-template-columns: 1fr;
+    z-index: 1;
+  }
+  .nav-wrapper {
+    z-index: 2;
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+  }
+  .hr-div {
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+    align-self: center;
+  }
+}

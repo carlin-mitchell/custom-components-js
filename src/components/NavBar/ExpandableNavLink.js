@@ -10,8 +10,7 @@ import NavLink from "./NavLink";
 // }
 
 const ExpandableNavLink = (props) => {
-  const { innerText } = props;
-  const { href } = props;
+  const subLinkObjects = props.subLinkObjects ? props.subLinkObjects : [];
   const a = (innerText, href, className) =>
     Element("a", {
       innerText,
@@ -22,17 +21,19 @@ const ExpandableNavLink = (props) => {
   const button = Element(
     "button",
     {
-      innerText: "Contact",
-      className: "p-1 bg-transparent text-white border-none text-uppercase ",
+      innerText: props.innerText,
+      className:
+        "pt-1 pr-2 pb-1 pl-1 bg-transparent text-white border-none text-uppercase cursor-pointer ",
     },
     []
   );
 
+  const linkClasses = "bg-primary-light-1 bg-hover-primary-dark-2";
   const dropDownContent = Element(
     "div",
     { className: "dropdown-content" },
     //children
-    [a("Link 1", "#"), a("Link 2", "#"), a("Link 3", "#"), a("Link 4", "#")]
+    [...subLinkObjects.map((obj) => a(obj.innerText, obj.href, linkClasses))]
   );
 
   const expandableNavLink = Element(
