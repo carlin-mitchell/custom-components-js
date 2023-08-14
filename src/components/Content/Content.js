@@ -1,8 +1,8 @@
 // COMPONENT IMPORTS
 import Element from "../Element";
-import TestHeader from "../TestHeader/TestHeader";
 import ComponentSection from "../ComponentSection/ComponentSection";
 import NavBar from "../NavBar/NabBar";
+import ImageCarousel from "../ImageCarousel/ImageCarousel";
 
 // LOGIC IMPORTS
 //
@@ -16,6 +16,9 @@ const Content = () => {
   const content = Element("div", { id: "content" });
 
   content.appendChild(ComponentSection("Navbar With Dropdown", NavBar(), true));
+  content.appendChild(
+    ComponentSection("Image Carousel", ImageCarousel(), true)
+  );
 
   return content;
 };

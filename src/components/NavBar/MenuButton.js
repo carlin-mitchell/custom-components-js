@@ -1,6 +1,6 @@
 // COMPONENT IMPORTS
 import Element from "../Element";
-import MenuIcon from "../Assets/menu-white.svg";
+import Icon from "../base-elements/Icon";
 // LOGIC IMPORTS
 
 import ui from "../../managers/uiManager/uiManager";
@@ -11,10 +11,7 @@ function someMethod() {
 }
 
 const MenuContainer = () => {
-  const menuIcon = Element("img", {
-    src: MenuIcon,
-  });
-
+  const menuIcon = Icon("icon-hamburger-menu text-white font-lg");
   const menuButton = Element(
     "button",
     {
