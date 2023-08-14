@@ -10,7 +10,7 @@ import Element from "../Element";
 // }
 
 const Icon = (iconClass) => {
-  const icon = Element("i", { className: `icon ${iconClass}` });
+  const icon = Element("i", { className: `icon ${iconClass} display-i-b` });
   return icon;
 };
 

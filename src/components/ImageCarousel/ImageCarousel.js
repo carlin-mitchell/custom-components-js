@@ -1,5 +1,8 @@
 // COMPONENT IMPORTS
 import Element from "../Element";
+import LeftCarouselButton from "./LeftButton";
+import Icon from "../base-elements/Icon";
+import RightCarouselButton from "./RightButton";
 
 // LOGIC IMPORTS
 //
@@ -10,16 +13,19 @@ import Element from "../Element";
 // }
 
 const ImageCarousel = () => {
-  const container = Element(
+  const leftButton = LeftCarouselButton();
+  const rightButton = RightCarouselButton();
+
+  const carousel = Element(
     "div",
     {
       id: ``,
-      className: ``,
+      className: `carousel`,
     },
     // children
-    []
+    [leftButton, rightButton]
   );
-  return container;
+  return carousel;
 };
 
 export default ImageCarousel;

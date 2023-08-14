@@ -148,7 +148,6 @@ $utilities: (
       "5": $base-padding * 8,
     ),
   ),
-
   // ********************** OPACITY ************************
   "opacity":
     (
@@ -201,9 +200,9 @@ $utilities: (
         "n": none,
         "b": block,
         "f": flex,
-        "g": grid,
         "i": inline,
         "i-b": inline-block,
+        "grid": grid,
       ),
     ),
   // ************************ FONT SIZE **************************
@@ -216,6 +215,8 @@ $utilities: (
         "lg": $font-size-lg,
         "xl": $font-size-xl,
         "xxl": $font-size-xxl,
+        "xxxl": $font-size-xxxl,
+        "xxxxl": $font-size-xxxxl,
       ),
     ),
   // ************************ VISIBILITY **************************
@@ -245,15 +246,21 @@ $utilities: (
         "no-wrap": nowrap,
       ),
     ),
-  // ******************** TEXT **********************
-  "text-transform":
+  // ********************* ROTATION ***********************
+  "transform":
     (
-      "prefix": "text",
+      "prefix": "rotate",
       "values": (
-        "transform-none": none,
-        "uppercase": uppercase,
-        "lowercase": lowercase,
-        "capitalize": capitalize,
+        "none": rotate(0deg),
+        "0": rotate(0deg),
+        "45": rotate(45deg),
+        "90": rotate(90deg),
+        "135": rotate(135deg),
+        "180": rotate(180deg),
+        "flip": rotate(180deg),
+        "225": rotate(255deg),
+        "270": rotate(270deg),
+        "315": rotate(315deg),
       ),
     )
 );
@@ -280,10 +287,6 @@ $utilities: (
   flex-wrap: wrap;
 }
 
-.flex-column {
-  flex-direction: column;
-}
-
 .flex-layout {
   width: 100%;
   display: flex;
@@ -292,21 +295,17 @@ $utilities: (
   box-sizing: border-box;
 }
 
-// *********************** BORDER *************************
-.border-none {
-  border: none;
+.flex-column {
+  flex-direction: column;
 }
 
+.flex-justify-center {
+  justify-content: center;
+}
+.flex-align-center {
+  align-items: center;
+}
 // ********************** Containers ************************
 .container {
   @extend .flex-layout;
 }
-
-.container-max-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-}
-
-//

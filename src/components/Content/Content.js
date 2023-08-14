@@ -4,6 +4,7 @@ import ComponentSection from "../ComponentSection/ComponentSection";
 import NavBar from "../NavBar/NabBar";
 import ImageCarousel from "../ImageCarousel/ImageCarousel";
 
+import Icon from "../base-elements/Icon";
 // LOGIC IMPORTS
 //
 
@@ -19,7 +20,6 @@ const Content = () => {
   content.appendChild(
     ComponentSection("Image Carousel", ImageCarousel(), true)
   );
-
   return content;
 };
 

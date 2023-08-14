@@ -1,0 +1,19 @@
+.carousel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .carousel-button {
+    width: max-content;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &:nth-child(1) {
+      justify-self: start;
+    }
+    &:nth-child(2) {
+      justify-self: end;
+    }
+  }
+}
