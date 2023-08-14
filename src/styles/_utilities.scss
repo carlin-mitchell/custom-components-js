@@ -9,6 +9,9 @@ $utilities: (
       "prefix": "p",
       "values": (
         "0": 0,
+        "quarter": $base-margin * 0.25,
+        "half": $base-margin * 0.5,
+        "three-quarter": $base-margin * 0.75,
         "1": $base-padding,
         "2": $base-padding * 2,
         "3": $base-padding * 4,
@@ -20,6 +23,9 @@ $utilities: (
     "prefix": "pl",
     "values": (
       "0": 0,
+      "quarter": $base-margin * 0.25,
+      "half": $base-margin * 0.5,
+      "three-quarter": $base-margin * 0.75,
       "1": $base-padding,
       "2": $base-padding * 2,
       "3": $base-padding * 4,
@@ -31,6 +37,9 @@ $utilities: (
     "prefix": "pr",
     "values": (
       "0": 0,
+      "quarter": $base-margin * 0.25,
+      "half": $base-margin * 0.5,
+      "three-quarter": $base-margin * 0.75,
       "1": $base-padding,
       "2": $base-padding * 2,
       "3": $base-padding * 4,
@@ -42,6 +51,9 @@ $utilities: (
     "prefix": "pt",
     "values": (
       "0": 0,
+      "quarter": $base-margin * 0.25,
+      "half": $base-margin * 0.5,
+      "three-quarter": $base-margin * 0.75,
       "1": $base-padding,
       "2": $base-padding * 2,
       "3": $base-padding * 4,
@@ -53,6 +65,9 @@ $utilities: (
     "prefix": "pb",
     "values": (
       "0": 0,
+      "quarter": $base-margin * 0.25,
+      "half": $base-margin * 0.5,
+      "three-quarter": $base-margin * 0.75,
       "1": $base-padding,
       "2": $base-padding * 2,
       "3": $base-padding * 4,
@@ -66,6 +81,9 @@ $utilities: (
       "prefix": "m",
       "values": (
         "0": 0,
+        "quarter": $base-margin * 0.25,
+        "half": $base-margin * 0.5,
+        "three-quarter": $base-margin * 0.75,
         "1": $base-margin,
         "2": $base-margin * 2,
         "3": $base-margin * 4,
@@ -78,6 +96,9 @@ $utilities: (
     "prefix": "mt",
     "values": (
       "0": 0,
+      "quarter": $base-margin * 0.25,
+      "half": $base-margin * 0.5,
+      "three-quarter": $base-margin * 0.75,
       "1": $base-margin,
       "2": $base-margin * 2,
       "3": $base-margin * 4,
@@ -89,6 +110,9 @@ $utilities: (
     "prefix": "mb",
     "values": (
       "0": 0,
+      "quarter": $base-margin * 0.25,
+      "half": $base-margin * 0.5,
+      "three-quarter": $base-margin * 0.75,
       "1": $base-margin,
       "2": $base-margin * 2,
       "3": $base-margin * 4,
@@ -100,6 +124,9 @@ $utilities: (
     "prefix": "ml",
     "values": (
       "0": 0,
+      "quarter": $base-margin * 0.25,
+      "half": $base-margin * 0.5,
+      "three-quarter": $base-margin * 0.75,
       "1": $base-margin,
       "2": $base-margin * 2,
       "3": $base-margin * 4,
@@ -111,6 +138,9 @@ $utilities: (
     "prefix": "mr",
     "values": (
       "0": 0,
+      "quarter": $base-margin * 0.25,
+      "half": $base-margin * 0.5,
+      "three-quarter": $base-margin * 0.75,
       "1": $base-padding,
       "2": $base-padding * 2,
       "3": $base-padding * 4,

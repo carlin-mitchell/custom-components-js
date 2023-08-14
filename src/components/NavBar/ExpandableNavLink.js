@@ -1,6 +1,7 @@
 // COMPONENT IMPORTS
 import Element from "../Element";
 import NavLink from "./NavLink";
+import Icon from "../base-elements/Icon";
 // LOGIC IMPORTS
 //
 
@@ -12,9 +13,7 @@ import NavLink from "./NavLink";
 const ExpandableNavLink = (props) => {
   const subLinkObjects = props.subLinkObjects ? props.subLinkObjects : [];
 
-  const icon = Element("i", {
-    className: "icon icon-github-mark text-white font-md ml-1",
-  });
+  const icon = Icon("icon-github-cat ml-half");
 
   const a = (innerText, href, className) =>
     Element(
