@@ -9,14 +9,14 @@ import Icon from "../base-elements/Icon";
 //   //
 // }
 
-const LeftCarouselButton = () => {
-  const icon = Icon("icon-up-arrow rotate-270");
+const LeftCarouselButton = (sharedClasses) => {
+  const icon = Icon("icon-up-arrow rotate-270 p-1");
 
   const button = Element(
     "button",
     {
       id: ``,
-      className: `carousel-button display-i-b p-1`,
+      className: `carousel-button left ` + sharedClasses,
     },
     // children
     [icon]

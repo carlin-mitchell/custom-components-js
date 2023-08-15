@@ -1,6 +1,10 @@
+@use "../vars" as *;
+
 .carousel {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto 500px auto;
+  justify-self: center;
+  border: solid black 1px;
 
   .carousel-button {
     width: max-content;
@@ -9,11 +13,12 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    &:nth-child(1) {
-      justify-self: start;
-    }
-    &:nth-child(2) {
-      justify-self: end;
-    }
+    border: none;
+    // .left {
+    //   justify-self: start;
+    // }
+    // .right {
+    //   justify-self: end;
+    // }
   }
 }

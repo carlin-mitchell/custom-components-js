@@ -1,8 +1,8 @@
 // COMPONENT IMPORTS
 import Element from "../Element";
 import LeftCarouselButton from "./LeftButton";
-import Icon from "../base-elements/Icon";
 import RightCarouselButton from "./RightButton";
+import CarouselTrackContainer from "./CarouselTrackContainer";
 
 // LOGIC IMPORTS
 //
@@ -13,8 +13,9 @@ import RightCarouselButton from "./RightButton";
 // }
 
 const ImageCarousel = () => {
-  const leftButton = LeftCarouselButton();
-  const rightButton = RightCarouselButton();
+  const sharedButtonClasses = "bg-transparent bg-hover-gray-light-9";
+  const leftButton = LeftCarouselButton(sharedButtonClasses);
+  const rightButton = RightCarouselButton(sharedButtonClasses);
 
   const carousel = Element(
     "div",
@@ -23,7 +24,7 @@ const ImageCarousel = () => {
       className: `carousel`,
     },
     // children
-    [leftButton, rightButton]
+    [leftButton, CarouselTrackContainer(), rightButton]
   );
   return carousel;
 };

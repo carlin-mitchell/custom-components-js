@@ -309,3 +309,8 @@ $utilities: (
 .container {
   @extend .flex-layout;
 }
+
+// ********************** Borders ************************
+.border-none {
+  border: none !important;
+}
