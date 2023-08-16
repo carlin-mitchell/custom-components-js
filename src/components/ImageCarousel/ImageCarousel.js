@@ -3,6 +3,7 @@ import Element from "../Element";
 import LeftCarouselButton from "./LeftButton";
 import Icon from "../base-elements/Icon";
 import RightCarouselButton from "./RightButton";
+import CarouselTrackContainer from "./CarouselTrackContainer";
 
 // LOGIC IMPORTS
 //
@@ -23,7 +24,7 @@ const ImageCarousel = () => {
       className: `carousel`,
     },
     // children
-    [leftButton, rightButton]
+    [leftButton, CarouselTrackContainer(), rightButton]
   );
   return carousel;
 };
