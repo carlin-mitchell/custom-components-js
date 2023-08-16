@@ -13,7 +13,8 @@ import CarouselTrackContainer from "./CarouselTrackContainer";
 // }
 
 const ImageCarousel = () => {
-  const sharedButtonClasses = "bg-transparent bg-hover-gray-light-9";
+  const sharedButtonClasses =
+    "bg-transparent border-none bg-hover-gray-light-9";
   const leftButton = LeftCarouselButton(sharedButtonClasses);
   const rightButton = RightCarouselButton(sharedButtonClasses);
 

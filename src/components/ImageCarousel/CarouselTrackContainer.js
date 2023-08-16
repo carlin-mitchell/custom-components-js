@@ -1,5 +1,6 @@
 // COMPONENT IMPORTS
 import Element from "../Element";
+import CarouselTrack from "./CarouselTrack";
 
 // LOGIC IMPORTS
 //
@@ -17,7 +18,7 @@ const CarouselTrackContainer = () => {
       className: `carousel-track-container`,
     },
     // children
-    []
+    [CarouselTrack()]
   );
   return container;
 };

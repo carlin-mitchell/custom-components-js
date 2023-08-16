@@ -4,6 +4,7 @@
   display: grid;
   grid-template-columns: auto minmax(300px, 1fr) auto;
   justify-self: center;
+  border: 3px solid black;
 
   .carousel-button {
     width: max-content;

@@ -16,7 +16,7 @@ const LeftCarouselButton = (sharedClasses) => {
     "button",
     {
       id: ``,
-      className: `carousel-button left ` + sharedClasses,
+      className: `carousel-button ` + sharedClasses,
     },
     // children
     [icon]
