@@ -24,7 +24,7 @@ const ImageCarousel = () => {
       className: `carousel`,
     },
     // children
-    [leftButton, CarouselTrackContainer(), rightButton]
+    [leftButton, rightButton]
   );
   return carousel;
 };

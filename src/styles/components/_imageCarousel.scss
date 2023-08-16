@@ -2,7 +2,7 @@
 
 .carousel {
   display: grid;
-  grid-template-columns: auto 500px auto;
+  grid-template-columns: max-content max-content;
   justify-self: center;
   border: solid black 1px;
 
@@ -14,11 +14,11 @@
     justify-content: center;
     cursor: pointer;
     border: none;
-    // .left {
-    //   justify-self: start;
-    // }
-    // .right {
-    //   justify-self: end;
-    // }
+    .left {
+      justify-self: start;
+    }
+    .right {
+      justify-self: end;
+    }
   }
 }
