@@ -2,9 +2,8 @@
 
 .carousel {
   display: grid;
-  grid-template-columns: max-content max-content;
+  grid-template-columns: auto minmax(300px, 1fr) auto;
   justify-self: center;
-  border: solid black 1px;
 
   .carousel-button {
     width: max-content;
@@ -13,12 +12,5 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    border: none;
-    .left {
-      justify-self: start;
-    }
-    .right {
-      justify-self: end;
-    }
   }
 }

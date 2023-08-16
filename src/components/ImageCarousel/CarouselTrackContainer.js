@@ -10,7 +10,7 @@ import Element from "../Element";
 // }
 
 const CarouselTrackContainer = () => {
-  const trackContainer = Element(
+  const container = Element(
     "div",
     {
       id: ``,
@@ -19,7 +19,7 @@ const CarouselTrackContainer = () => {
     // children
     []
   );
-  return trackContainer;
+  return container;
 };
 
 export default CarouselTrackContainer;
