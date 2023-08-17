@@ -1,5 +1,6 @@
 // COMPONENT IMPORTS
 import Element from "../Element";
+import Image from "../base-elements/Image";
 
 // LOGIC IMPORTS
 //
@@ -9,7 +10,7 @@ import Element from "../Element";
 //   //
 // }
 
-const CarouselSlide = () => {
+const CarouselSlide = (imageSource) => {
   const slide = Element(
     "div",
     {
@@ -17,7 +18,7 @@ const CarouselSlide = () => {
       className: `carousel-slide`,
     },
     // children
-    []
+    [Image(imageSource)]
   );
   return slide;
 };

@@ -1,6 +1,11 @@
 // COMPONENT IMPORTS
 import Element from "../Element";
 import CarouselSlide from "./CarouselSlide";
+
+import Brick from "./assets/brick.png";
+import PaintFace from "./assets/paint-face.png";
+import Mac from "./assets/mac.png";
+
 // LOGIC IMPORTS
 //
 
@@ -17,7 +22,7 @@ const CarouselTrack = () => {
       className: `carousel-track`,
     },
     // children
-    [CarouselSlide()]
+    [CarouselSlide(Brick)]
   );
   return carouselTrack;
 };

@@ -30,4 +30,14 @@
   .carousel-track-container {
     grid-area: track_container;
   }
+
+  .carousel-track,
+  .carousel-slide {
+    display: grid;
+    align-items: center;
+  }
+
+  .carousel-track .carousel-slide img {
+    height: 300px;
+  }
 }
