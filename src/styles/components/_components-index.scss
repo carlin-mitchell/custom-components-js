@@ -1,6 +1,6 @@
 @use "./button";
 @use "./card";
 @use "./test";
-@use "./navbar";
+@use "../../components/NavBar/navbar";
 @use "./component-section";
-@use "./imageCarousel";
+@use "../../components/ImageCarousel/imageCarousel";

@@ -1,5 +1,5 @@
-@use "../vars" as *;
-@use "../breakpoints" as screen;
+@use "../../styles/vars" as *;
+@use "../../styles/breakpoints" as screen;
 
 .nav-wrapper {
   width: 100%;

@@ -3,6 +3,7 @@ import Element from "../Element";
 import LeftCarouselButton from "./LeftButton";
 import RightCarouselButton from "./RightButton";
 import CarouselTrackContainer from "./CarouselTrackContainer";
+import SlideTracker from "./SlideTracker";
 
 // LOGIC IMPORTS
 //
@@ -14,7 +15,7 @@ import CarouselTrackContainer from "./CarouselTrackContainer";
 
 const ImageCarousel = () => {
   const sharedButtonClasses =
-    "bg-transparent border-none bg-hover-gray-light-9";
+    "bg-transparent border-none bg-hover-gray-light-9 p-1";
   const leftButton = LeftCarouselButton(sharedButtonClasses);
   const rightButton = RightCarouselButton(sharedButtonClasses);
 
@@ -25,7 +26,7 @@ const ImageCarousel = () => {
       className: `carousel`,
     },
     // children
-    [leftButton, CarouselTrackContainer(), rightButton]
+    [leftButton, CarouselTrackContainer(), rightButton, SlideTracker()]
   );
   return carousel;
 };
