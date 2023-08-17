@@ -3,7 +3,7 @@ import Element from "../Element";
 import LeftCarouselButton from "./LeftButton";
 import RightCarouselButton from "./RightButton";
 import CarouselTrackContainer from "./CarouselTrackContainer";
-import SlideTracker from "./SlideTracker";
+import CarouselNav from "./CarouselNav";
 
 // LOGIC IMPORTS
 //
@@ -23,10 +23,10 @@ const ImageCarousel = () => {
     "div",
     {
       id: ``,
-      className: `carousel`,
+      className: `carousel pt-1 pb-1`,
     },
     // children
-    [leftButton, CarouselTrackContainer(), rightButton, SlideTracker()]
+    [leftButton, CarouselTrackContainer(), rightButton, CarouselNav()]
   );
   return carousel;
 };
