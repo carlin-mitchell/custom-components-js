@@ -1,6 +1,6 @@
 import Element from "../Element";
 import { getNumImages } from "../managers/dataManagers/carouselData";
-
+import { displayCarouselImage } from "../managers/uiManager/carousel-ui";
 // LOGIC IMPORTS
 //
 
@@ -10,9 +10,12 @@ import { getNumImages } from "../managers/dataManagers/carouselData";
 // }
 
 const CarouselNav = () => {
-  const carouselNavIndicator = () =>
+  const carouselNavIndicator = (id) =>
     Element("button", {
       className: "carousel-indicator display-i-b bg-gray-light-6",
+      onclick: function () {
+        displayCarouselImage(id);
+      },
     });
 
   const navDiv = Element(
@@ -22,7 +25,7 @@ const CarouselNav = () => {
       className: `carousel-nav pt-1`,
     },
     // children
-    [carouselNavIndicator(), carouselNavIndicator(), carouselNavIndicator()]
+    [carouselNavIndicator(0), carouselNavIndicator(1), carouselNavIndicator(2)]
   );
   return navDiv;
 };

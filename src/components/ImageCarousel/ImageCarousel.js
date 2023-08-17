@@ -14,8 +14,7 @@ import CarouselNav from "./CarouselNav";
 // }
 
 const ImageCarousel = () => {
-  const sharedButtonClasses =
-    "bg-transparent border-none bg-hover-gray-light-9 p-1";
+  const sharedButtonClasses = "bg-transparent border-none p-1";
   const leftButton = LeftCarouselButton(sharedButtonClasses);
   const rightButton = RightCarouselButton(sharedButtonClasses);
 

@@ -22,7 +22,11 @@ const CarouselTrack = () => {
       className: `carousel-track`,
     },
     // children
-    [CarouselSlide(Brick)]
+    [
+      CarouselSlide(Brick, 0),
+      CarouselSlide(PaintFace, 1),
+      CarouselSlide(Mac, 2),
+    ]
   );
   return carouselTrack;
 };
