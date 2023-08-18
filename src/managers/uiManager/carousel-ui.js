@@ -1,9 +1,24 @@
-export function getAllCarouselSlides() {
+// ########################## UTILITIES #########################
+
+function getAllCarouselSlides() {
   return [...document.querySelector(".carousel-track").childNodes];
+}
+
+function getAllCarouselSlideIds() {
+  return getAllCarouselSlides().map((elem) => elem.id);
 }
 
 function getAllCarouselNavButtons() {
   return [...document.querySelectorAll(".carousel-indicator")];
+}
+
+function getCurrentSlideIndex() {
+  const allSlideIds = getAllCarouselSlideIds();
+  const currentSlideId = document.querySelector(".carousel-slide.active").id;
+  console.log(currentSlideId);
+  const currentSlideIndex = allSlideIds.indexOf(currentSlideId);
+
+  return currentSlideIndex;
 }
 
 function getPreviousSlideIndex() {
@@ -27,17 +42,24 @@ function getNextSlideIndex() {
   return correctedIndex;
 }
 
-function getAllCarouselSlideIds() {
-  return getAllCarouselSlides().map((elem) => elem.id);
+// move to the selected slide
+export function gotoSpecificSlide(id) {
+  const allNavButtons = getAllCarouselNavButtons();
+  const selectedNavButton = document.getElementById(`carousel-nav-${id}`);
+  const selectedSlide = document.getElementById(`carousel-slide-${id}`);
+  const allSlides = getAllCarouselSlides();
+
+  allSlides.forEach((slide) => slide.classList.remove("active"));
+  selectedSlide.classList.add("active");
+
+  allNavButtons.forEach((slide) => slide.classList.remove("active"));
+  selectedNavButton.classList.add("active");
 }
 
-function getCurrentSlideIndex() {
-  const allSlideIds = getAllCarouselSlideIds();
-  const currentSlideId = document.querySelector(".carousel-slide.active").id;
-  console.log(currentSlideId);
-  const currentSlideIndex = allSlideIds.indexOf(currentSlideId);
-
-  return currentSlideIndex;
+// ######################## EVENT HANDLERS ########################
+// move to the selected slide when clicking on the associated nav button
+export function clickCarouselNav(id) {
+  gotoSpecificSlide(id);
 }
 
 // move right when clicking on the right button
@@ -57,23 +79,5 @@ export function clickCarouselLeft() {
     ""
   );
   console.log(id);
-  gotoSpecificSlide(id);
-}
-
-// move to the selected slide
-export function gotoSpecificSlide(id) {
-  const allNavButtons = getAllCarouselNavButtons();
-  const selectedNavButton = document.getElementById(`carousel-nav-${id}`);
-  const selectedSlide = document.getElementById(`carousel-slide-${id}`);
-  const allSlides = getAllCarouselSlides();
-
-  allSlides.forEach((slide) => slide.classList.remove("active"));
-  selectedSlide.classList.add("active");
-
-  allNavButtons.forEach((slide) => slide.classList.remove("active"));
-  selectedNavButton.classList.add("active");
-}
-
-export function clickCarouselNav(id) {
   gotoSpecificSlide(id);
 }

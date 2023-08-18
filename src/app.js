@@ -2,7 +2,6 @@ import "./styles/index.scss";
 import Content from "./components/Content/Content";
 
 import { applyWindowListeners } from "./managers/uiManager/windowEventListeners";
-import { getAllCarouselSlides } from "./managers/uiManager/carousel-ui";
 
 const debugging = true;
 
@@ -13,5 +12,5 @@ applyWindowListeners();
 
 // debugging
 if (debugging) {
-  console.log(getAllCarouselSlides());
+  //
 }
