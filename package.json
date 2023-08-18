@@ -38,6 +38,7 @@
     "webpack-dev-server": "^4.15.0"
   },
   "dependencies": {
-    "glob": "^10.3.3"
+    "glob": "^10.3.3",
+    "uuid": "^9.0.0"
   }
 }

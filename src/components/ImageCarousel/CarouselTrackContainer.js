@@ -10,7 +10,7 @@ import CarouselTrack from "./CarouselTrack";
 //   //
 // }
 
-const CarouselTrackContainer = () => {
+const CarouselTrackContainer = (imageIds) => {
   const container = Element(
     "div",
     {
@@ -18,7 +18,7 @@ const CarouselTrackContainer = () => {
       className: `carousel-track-container`,
     },
     // children
-    [CarouselTrack()]
+    [CarouselTrack(imageIds)]
   );
   return container;
 };

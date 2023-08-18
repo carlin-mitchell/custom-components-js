@@ -1,6 +1,7 @@
 // COMPONENT IMPORTS
 import Element from "../Element";
 import Icon from "../base-elements/Icon";
+import { clickCarouselRight } from "../managers/uiManager/carousel-ui";
 // LOGIC IMPORTS
 //
 
@@ -17,6 +18,9 @@ const RightCarouselButton = (sharedClasses) => {
     {
       id: ``,
       className: `carousel-button right ` + sharedClasses,
+      onclick() {
+        clickCarouselRight();
+      },
     },
     // children
     [icon]

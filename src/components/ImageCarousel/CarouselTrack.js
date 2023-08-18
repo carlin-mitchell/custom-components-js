@@ -14,7 +14,7 @@ import Mac from "./assets/mac.png";
 //   //
 // }
 
-const CarouselTrack = () => {
+const CarouselTrack = (imageIds) => {
   const carouselTrack = Element(
     "ul",
     {
@@ -23,9 +23,9 @@ const CarouselTrack = () => {
     },
     // children
     [
-      CarouselSlide(Brick, 0),
-      CarouselSlide(PaintFace, 1),
-      CarouselSlide(Mac, 2),
+      CarouselSlide(Brick, imageIds[0]),
+      CarouselSlide(PaintFace, imageIds[1]),
+      CarouselSlide(Mac, imageIds[2]),
     ]
   );
   return carouselTrack;

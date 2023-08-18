@@ -13,9 +13,9 @@ import Image from "../base-elements/Image";
 const CarouselSlide = (imageSource, id) => {
   const carouselImage = Element("img", {
     src: imageSource,
-    id: "carousel-image-" + id,
     className: "carousel-image",
   });
+
   const slide = Element(
     "div",
     {
