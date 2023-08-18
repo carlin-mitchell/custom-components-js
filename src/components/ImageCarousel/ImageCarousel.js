@@ -6,6 +6,8 @@ import CarouselTrackContainer from "./CarouselTrackContainer";
 import CarouselNav from "./CarouselNav";
 import { v4 as uuidv4 } from "uuid";
 
+import { imageData } from "./imageLoader";
+
 // LOGIC IMPORTS
 //
 
@@ -32,9 +34,9 @@ const ImageCarousel = () => {
     // children
     [
       leftButton,
-      CarouselTrackContainer(imageIds),
+      CarouselTrackContainer(imageData),
       rightButton,
-      CarouselNav(imageIds),
+      CarouselNav(imageData),
     ]
   );
   return carousel;

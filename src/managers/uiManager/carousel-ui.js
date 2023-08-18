@@ -15,7 +15,6 @@ function getAllCarouselNavButtons() {
 function getCurrentSlideIndex() {
   const allSlideIds = getAllCarouselSlideIds();
   const currentSlideId = document.querySelector(".carousel-slide.active").id;
-  console.log(currentSlideId);
   const currentSlideIndex = allSlideIds.indexOf(currentSlideId);
 
   return currentSlideIndex;
@@ -33,9 +32,7 @@ function getPreviousSlideIndex() {
 }
 
 function getNextSlideIndex() {
-  console.log(getCurrentSlideIndex());
   let nextSlideIndex = getCurrentSlideIndex() + 1;
-  console.log(nextSlideIndex);
   const correctedIndex =
     nextSlideIndex > getAllCarouselSlideIds().length - 1 ? 0 : nextSlideIndex;
 
