@@ -24,7 +24,7 @@ const CarouselTrack = (imageData) => {
     // children
     [
       ...imageData.map((obj, index) =>
-        CarouselSlide(obj.src, obj.uuid, index ? false : true)
+        CarouselSlide(obj.src, obj.uuid, obj.isActive ? true : false)
       ),
     ]
   );

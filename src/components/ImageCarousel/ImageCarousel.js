@@ -6,7 +6,7 @@ import CarouselTrackContainer from "./CarouselTrackContainer";
 import CarouselNav from "./CarouselNav";
 import { v4 as uuidv4 } from "uuid";
 
-import { imageData } from "./imageLoader";
+import { imageData } from "./data/imageLoader";
 
 // LOGIC IMPORTS
 //

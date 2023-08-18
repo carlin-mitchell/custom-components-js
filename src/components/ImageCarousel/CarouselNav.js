@@ -1,5 +1,5 @@
 import Element from "../Element";
-import { clickCarouselNav } from "../../managers/uiManager/carousel-ui";
+import { clickCarouselNav } from "./ui/carousel-ui";
 
 // LOGIC IMPORTS
 //
@@ -30,7 +30,7 @@ const CarouselNav = (imageData) => {
     // children
     [
       ...imageData.map((obj, index) =>
-        carouselNavIndicator(obj.uuid, index ? false : true)
+        carouselNavIndicator(obj.uuid, obj.isActive ? true : false)
       ),
     ]
   );

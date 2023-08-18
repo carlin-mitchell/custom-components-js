@@ -1,7 +1,7 @@
 // COMPONENT IMPORTS
 import Element from "../Element";
 import Icon from "../base-elements/Icon";
-import { clickCarouselRight } from "../../managers/uiManager/carousel-ui";
+import { clickCarouselRight } from "./ui/carousel-ui";
 // LOGIC IMPORTS
 //
 
