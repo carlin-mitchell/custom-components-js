@@ -23,6 +23,7 @@ function getCurrentSlideIndex() {
 function getPreviousSlideIndex() {
   let previousSlideIndex = getCurrentSlideIndex() - 1;
 
+  // if the calculated index is outside the list, set it to the index of the last item in the list
   const correctedIndex =
     previousSlideIndex < 0
       ? getAllCarouselSlideIds().length - 1
@@ -33,6 +34,8 @@ function getPreviousSlideIndex() {
 
 function getNextSlideIndex() {
   let nextSlideIndex = getCurrentSlideIndex() + 1;
+
+  // if the calculated index is outside the list, set it to the index of the first item in the list
   const correctedIndex =
     nextSlideIndex > getAllCarouselSlideIds().length - 1 ? 0 : nextSlideIndex;
 
