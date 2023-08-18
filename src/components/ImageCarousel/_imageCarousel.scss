@@ -36,6 +36,9 @@
       border-radius: 100%;
       border: none;
       cursor: pointer;
+      &.active {
+        background-color: darken(gray, 10%);
+      }
     }
   }
   .carousel-track-container {
@@ -51,9 +54,10 @@
   .carousel-slide {
     grid-row: 1/-1;
     grid-column: 1/-1;
-    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.75s ease-in-out;
     &.active {
-      z-index: 2;
+      opacity: 1;
     }
   }
 

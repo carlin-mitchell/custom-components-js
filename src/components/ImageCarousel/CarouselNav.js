@@ -10,10 +10,12 @@ import { clickCarouselNav } from "../../managers/uiManager/carousel-ui";
 // }
 
 const CarouselNav = (imageIds) => {
-  const carouselNavIndicator = (imageId) =>
+  const carouselNavIndicator = (imageId, startsActive) =>
     Element("button", {
       id: `carousel-nav-${imageId}`,
-      className: "carousel-indicator display-i-b bg-gray-light-6",
+      className: `carousel-indicator display-i-b bg-gray-light-6 ${
+        startsActive ? "active" : ""
+      }`,
       onclick: function () {
         clickCarouselNav(imageId);
       },
@@ -27,7 +29,7 @@ const CarouselNav = (imageIds) => {
     },
     // children
     [
-      carouselNavIndicator(imageIds[0]),
+      carouselNavIndicator(imageIds[0], true),
       carouselNavIndicator(imageIds[1]),
       carouselNavIndicator(imageIds[2]),
     ]

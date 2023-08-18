@@ -23,7 +23,7 @@ const CarouselTrack = (imageIds) => {
     },
     // children
     [
-      CarouselSlide(Brick, imageIds[0]),
+      CarouselSlide(Brick, imageIds[0], true),
       CarouselSlide(PaintFace, imageIds[1]),
       CarouselSlide(Mac, imageIds[2]),
     ]

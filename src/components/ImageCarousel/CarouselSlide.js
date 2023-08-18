@@ -10,7 +10,7 @@ import Image from "../base-elements/Image";
 //   //
 // }
 
-const CarouselSlide = (imageSource, id) => {
+const CarouselSlide = (imageSource, id, startsActive) => {
   const carouselImage = Element("img", {
     src: imageSource,
     className: "carousel-image",
@@ -20,7 +20,7 @@ const CarouselSlide = (imageSource, id) => {
     "div",
     {
       id: `carousel-slide-` + id,
-      className: `carousel-slide`,
+      className: `carousel-slide ${startsActive ? "active" : ""}`,
     },
     // children
     [carouselImage]
