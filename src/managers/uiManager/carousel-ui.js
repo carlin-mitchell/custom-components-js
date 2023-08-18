@@ -18,8 +18,9 @@ function getPreviousSlideIndex() {
 }
 
 function getNextSlideIndex() {
+  console.log(getCurrentSlideIndex());
   let nextSlideIndex = getCurrentSlideIndex() + 1;
-
+  console.log(nextSlideIndex);
   const correctedIndex =
     nextSlideIndex > getAllCarouselSlideIds().length - 1 ? 0 : nextSlideIndex;
 
@@ -27,13 +28,13 @@ function getNextSlideIndex() {
 }
 
 function getAllCarouselSlideIds() {
-  getAllCarouselSlides().map((elem) => elem.id);
+  return getAllCarouselSlides().map((elem) => elem.id);
 }
 
 function getCurrentSlideIndex() {
   const allSlideIds = getAllCarouselSlideIds();
-  const currentSlideId = document.querySelector(".carousel-slide.current").id;
-
+  const currentSlideId = document.querySelector(".carousel-slide.active").id;
+  console.log(currentSlideId);
   const currentSlideIndex = allSlideIds.indexOf(currentSlideId);
 
   return currentSlideIndex;
@@ -41,12 +42,22 @@ function getCurrentSlideIndex() {
 
 // move right when clicking on the right button
 export function clickCarouselRight() {
-  console.log("carousel right");
+  const id = getAllCarouselSlideIds()[getNextSlideIndex()].replace(
+    "carousel-slide-",
+    ""
+  );
+  console.log(id);
+  gotoSpecificSlide(id);
 }
 
 // move left when clicking on the right button
 export function clickCarouselLeft() {
-  console.log("carousel left");
+  const id = getAllCarouselSlideIds()[getPreviousSlideIndex()].replace(
+    "carousel-slide-",
+    ""
+  );
+  console.log(id);
+  gotoSpecificSlide(id);
 }
 
 // move to the selected slide
