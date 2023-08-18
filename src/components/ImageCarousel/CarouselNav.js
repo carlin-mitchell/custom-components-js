@@ -1,5 +1,5 @@
 import Element from "../Element";
-import { clickCarouselNav } from "../managers/uiManager/carousel-ui";
+import { clickCarouselNav } from "../../managers/uiManager/carousel-ui";
 
 // LOGIC IMPORTS
 //

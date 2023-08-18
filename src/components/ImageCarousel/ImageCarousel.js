@@ -20,7 +20,7 @@ const ImageCarousel = () => {
   const rightButton = RightCarouselButton(sharedButtonClasses);
 
   const imageIds = Array(4)
-    .fill(0)
+    .fill(null)
     .map((elem) => uuidv4());
 
   const carousel = Element(

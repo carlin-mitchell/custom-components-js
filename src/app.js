@@ -2,9 +2,9 @@ import "./styles/index.scss";
 import Content from "./components/Content/Content";
 
 import { applyWindowListeners } from "./managers/uiManager/windowEventListeners";
-import { getCarouselSlides } from "./components/managers/uiManager/carousel-ui";
+import { getCarouselSlides } from "./managers/uiManager/carousel-ui";
 
-const debugging = false;
+const debugging = true;
 
 document.body.appendChild(Content());
 document.body.classList.add("p-2");

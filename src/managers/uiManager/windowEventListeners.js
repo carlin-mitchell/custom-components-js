@@ -1,5 +1,6 @@
 import { mobileMenuUp } from "./mobileMenu-ui";
 import { debounce } from "../../utils";
+import { getCarouselSlides } from "./carousel-ui";
 
 const breakPoints = {
   xs: 0,
