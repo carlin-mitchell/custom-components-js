@@ -7,7 +7,7 @@
   justify-self: center;
   grid-template-areas:
     "left_button track_container right_button"
-    "left_button nav right_button";
+    ". nav .";
 
   .carousel-button {
     display: flex;
