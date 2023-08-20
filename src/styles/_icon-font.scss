@@ -27,22 +27,25 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-pencil:before {
-  content: "\e900";
-  color: #4d4d4d;
-}
-.icon-up-arrow:before {
-  content: "\eaeb";
-}
-.icon-triangle:before {
-  content: "\eaec";
-}
 .icon-github-cat:before {
-  content: "\eaee";
+  content: "\e900";
 }
 .icon-hamburger-menu:before {
-  content: "\eaef";
+  content: "\e901";
+}
+.icon-pause:before {
+  content: "\e902";
+}
+.icon-pencil:before {
+  content: "\e903";
+  color: #4d4d4d;
 }
 .icon-plus-sign:before {
-  content: "\eaf0";
+  content: "\e904";
+}
+.icon-triangle:before {
+  content: "\e905";
+}
+.icon-up-arrow:before {
+  content: "\e906";
 }

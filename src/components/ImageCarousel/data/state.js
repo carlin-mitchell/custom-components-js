@@ -1,4 +1,4 @@
-let carouselAutoAdvance = true;
+let carouselAutoAdvance = false;
 
 export const getCarouselAutoAdvance = () => carouselAutoAdvance;
 

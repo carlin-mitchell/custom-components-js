@@ -88,4 +88,34 @@ export function togglePalyPause() {
 }
 
 // ######################## AUTO PROGRESSION ########################
-// window.setInterval(clickCarouselRight, 5000);
+export function clickPlay() {
+  setCarouselAutoAdvance(true);
+  handelAutoAdvance();
+  const playButton = document.querySelector(".carousel .play-button");
+  playButton.classList.toggle("visible");
+
+  const pauseButton = document.querySelector(".carousel .pause-button");
+  pauseButton.classList.toggle("visible");
+}
+
+export function clickPause() {
+  setCarouselAutoAdvance(false);
+  handelAutoAdvance();
+  const playButton = document.querySelector(".carousel .play-button");
+  playButton.classList.toggle("visible");
+
+  const pauseButton = document.querySelector(".carousel .pause-button");
+  pauseButton.classList.toggle("visible");
+}
+
+let interval;
+function handelAutoAdvance() {
+  const carouselAutoAdvance = getCarouselAutoAdvance();
+  if (carouselAutoAdvance) {
+    interval = window.setInterval(clickCarouselRight, 5000);
+    console.log("created interval", interval);
+  } else {
+    console.log("clear interval", interval);
+    window.clearInterval(interval);
+  }
+}
