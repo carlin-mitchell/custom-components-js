@@ -25,7 +25,7 @@ const CarouselNav = (imageData) => {
   const playButton = Element(
     "button",
     {
-      className: "play-button visible",
+      className: "play-button visible bg-transparent",
       onclick() {
         clickPlay();
       },
@@ -35,7 +35,7 @@ const CarouselNav = (imageData) => {
   const pauseButton = Element(
     "button",
     {
-      className: "pause-button",
+      className: "pause-button bg-transparent",
       onclick() {
         clickPause();
       },
