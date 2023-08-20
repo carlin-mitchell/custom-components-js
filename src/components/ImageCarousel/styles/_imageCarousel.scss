@@ -72,8 +72,18 @@
       grid-row: 1/-1;
       display: grid;
       display: none;
+      background-color: transparent;
       &.visible {
         display: grid;
+      }
+      &:hover {
+        background-color: transparent;
+      }
+      &:active {
+        background-color: transparent;
+      }
+      &:focus {
+        background-color: transparent;
       }
       & .icon {
         align-self: start;
