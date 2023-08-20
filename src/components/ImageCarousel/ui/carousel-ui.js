@@ -1,3 +1,5 @@
+import { getCarouselAutoAdvance, setCarouselAutoAdvance } from "../data/state";
+
 // ########################## UTILITIES #########################
 
 function getAllCarouselSlides() {
@@ -56,7 +58,7 @@ export function gotoSpecificSlide(id) {
   selectedNavButton.classList.add("active");
 }
 
-// ######################## EVENT HANDLERS ########################
+// ######################### EVENT HANDLERS #########################
 // move to the selected slide when clicking on the associated nav button
 export function clickCarouselNav(id) {
   gotoSpecificSlide(id);
@@ -68,7 +70,6 @@ export function clickCarouselRight() {
     "carousel-slide-",
     ""
   );
-  console.log(id);
   gotoSpecificSlide(id);
 }
 
@@ -78,6 +79,13 @@ export function clickCarouselLeft() {
     "carousel-slide-",
     ""
   );
-  console.log(id);
   gotoSpecificSlide(id);
 }
+
+export function togglePalyPause() {
+  const carouselAutoAdvance = getCarouselAutoAdvance();
+  setCarouselAutoAdvance(!carouselAutoAdvance);
+}
+
+// ######################## AUTO PROGRESSION ########################
+// window.setInterval(clickCarouselRight, 5000);

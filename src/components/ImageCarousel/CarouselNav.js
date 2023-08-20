@@ -1,5 +1,6 @@
 import Element from "../Element";
 import { clickCarouselNav } from "./ui/carousel-ui";
+import Icon from "../base-elements/Icon";
 
 // LOGIC IMPORTS
 //
@@ -21,6 +22,18 @@ const CarouselNav = (imageData) => {
       },
     });
 
+  const playButton = Element("button", { className: "play-button" }, [
+    Icon("icon-triangle rotate-90 font-sm"),
+  ]);
+  const carouselPlayPauseContainer = Element(
+    "div",
+    {
+      className: "carousel-play-pause-container",
+    },
+    // childern
+    [playButton]
+  );
+
   const navDiv = Element(
     "div",
     {
@@ -29,6 +42,7 @@ const CarouselNav = (imageData) => {
     },
     // children
     [
+      carouselPlayPauseContainer,
       ...imageData.map((obj, index) =>
         carouselNavIndicator(obj.uuid, obj.isActive ? true : false)
       ),

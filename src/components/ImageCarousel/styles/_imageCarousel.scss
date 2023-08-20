@@ -64,4 +64,13 @@
     max-height: 20rem;
     width: 100%;
   }
+
+  .carousel-play-pause-container {
+    & button {
+      display: grid;
+      & .icon {
+        align-self: start;
+      }
+    }
+  }
 }
