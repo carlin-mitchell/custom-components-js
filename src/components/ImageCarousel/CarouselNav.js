@@ -1,9 +1,8 @@
 import Element from "../Element";
 import { clickCarouselNav } from "./ui/carousel-ui";
-import Icon from "../base-elements/Icon";
+import { PlayButton, PauseButton } from "./playAndPauseButtons";
 
 // LOGIC IMPORTS
-import { clickPlay, clickPause } from "./ui/carousel-ui";
 
 // COMPONENT METHODS
 // function someMethod() {
@@ -22,33 +21,13 @@ const CarouselNav = (imageData) => {
       },
     });
 
-  const playButton = Element(
-    "button",
-    {
-      className: "play-button visible",
-      onclick() {
-        clickPlay();
-      },
-    },
-    [Icon("icon-triangle rotate-90 font-sm text-gray-dark-5")]
-  );
-  const pauseButton = Element(
-    "button",
-    {
-      className: "pause-button",
-      onclick() {
-        clickPause();
-      },
-    },
-    [Icon("icon-pause font-sm text-gray-dark-5")]
-  );
   const carouselPlayPauseContainer = Element(
     "div",
     {
       className: "carousel-play-pause-container",
     },
     // childern
-    [pauseButton, playButton]
+    [PauseButton, PlayButton]
   );
 
   const navDiv = Element(
