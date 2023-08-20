@@ -1,5 +1,3 @@
-import { getCarouselAutoAdvance, setCarouselAutoAdvance } from "../data/state";
-
 // ########################## UTILITIES #########################
 
 function getAllCarouselSlides() {
@@ -89,8 +87,7 @@ export function togglePalyPause() {
 
 // ######################## AUTO PROGRESSION ########################
 export function clickPlay() {
-  setCarouselAutoAdvance(true);
-  handelAutoAdvance();
+  handelAutoAdvance("play");
   const playButton = document.querySelector(".carousel .play-button");
   playButton.classList.toggle("visible");
 
@@ -99,8 +96,7 @@ export function clickPlay() {
 }
 
 export function clickPause() {
-  setCarouselAutoAdvance(false);
-  handelAutoAdvance();
+  handelAutoAdvance("pause");
   const playButton = document.querySelector(".carousel .play-button");
   playButton.classList.toggle("visible");
 
@@ -109,13 +105,19 @@ export function clickPause() {
 }
 
 let interval;
-function handelAutoAdvance() {
-  const carouselAutoAdvance = getCarouselAutoAdvance();
-  if (carouselAutoAdvance) {
+/**
+ * A function to create or cancel the auto advance timer
+ * you will neet to declare interval (let interval) before
+ * this function to allow the interval to be created / refenenced
+ * @param {string} mode a string containing 'play' or 'pause' to indicate the mode
+ */
+function handelAutoAdvance(mode) {
+  const playing = mode === "play" ? true : false;
+  if (playing) {
+    // start an interval timer and capture its reference
     interval = window.setInterval(clickCarouselRight, 5000);
-    console.log("created interval", interval);
   } else {
-    console.log("clear interval", interval);
+    // cancel the reference you captured
     window.clearInterval(interval);
   }
 }
