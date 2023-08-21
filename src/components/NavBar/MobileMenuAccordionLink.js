@@ -31,14 +31,17 @@ const MobileMenuAccordionLink = (props) => {
       "panel-title bg-transparent text-white border-none text-uppercase cursor-pointer ",
     innerText: props.innerText,
     onclick() {
-      console.log("clicked");
       const selectedAccordionContentWrapper = document.getElementById(
         "accordion-content-wrapper-" + componentId
       );
+      const selectedAccordionPanel = document.getElementById(
+        "accordion-panel-" + componentId
+      );
       selectedAccordionContentWrapper.classList.toggle("visible");
+      selectedAccordionPanel.classList.toggle("clicked");
     },
   });
-  const linkClasses = "bg-primary-light-1 bg-primary-dark-2 ml-1";
+  const linkClasses = "bg-hover-primary-light-2 ml-1";
 
   const accordionContent = Element("div", { className: "accordion-content" }, [
     ...subLinkObjects.map((obj) => a(obj.innerText, obj.href, linkClasses)),
@@ -56,7 +59,7 @@ const MobileMenuAccordionLink = (props) => {
   const accordionPanel = Element(
     "div",
     {
-      id: ``,
+      id: "accordion-panel-" + componentId,
       className: `accordion-panel bg-primary-light-1 p-1 text-uppercase bg-hover-primary-dark-2 cursor-pointer`,
     },
     // children

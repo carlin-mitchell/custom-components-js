@@ -111,6 +111,18 @@
 }
 
 .mobile-menu {
+  .accordion-panel {
+    .panel-title {
+      min-width: 100% !important;
+    }
+    &.clicked {
+      background-color: darken($primary, 10%);
+      & .panel-title::after {
+        content: "-";
+      }
+    }
+  }
+
   .panel-title::after {
     content: "+";
     position: absolute;
