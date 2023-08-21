@@ -10,7 +10,7 @@ export const PlayButton = Element(
       clickCarouselPlay();
     },
   },
-  [Icon("icon-triangle rotate-90 font-sm text-gray-dark-5")]
+  [Icon("icon-triangle rotate-90 font-sm text-gray-dark-4")]
 );
 
 export const PauseButton = Element(
@@ -21,5 +21,5 @@ export const PauseButton = Element(
       clickCarouselPause();
     },
   },
-  [Icon("icon-pause font-sm text-gray-dark-5")]
+  [Icon("icon-pause font-sm text-gray-dark-4")]
 );
