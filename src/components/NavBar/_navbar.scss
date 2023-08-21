@@ -135,7 +135,7 @@
     display: grid;
     grid-template-rows: 0fr;
     overflow: hidden;
-    transition: grid-template-rows 1s;
+    transition: grid-template-rows 0.5s;
     &.visible {
       grid-template-rows: 1fr;
     }
