@@ -16,7 +16,7 @@ const imageSources = [
   { src: WebDev },
 ];
 
-export const imageData = imageSources.map((source) => ({
-  ...source,
+export const imageData = imageSources.map((obj) => ({
+  ...obj,
   uuid: uuidv4(),
 }));
