@@ -1,6 +1,5 @@
 // COMPONENT IMPORTS
 import Element from "../Element";
-import NavLink from "./NavLink";
 import Icon from "../base-elements/Icon";
 // LOGIC IMPORTS
 //
