@@ -111,7 +111,8 @@
 }
 
 .mobile-menu {
-  .dropdown {
+  .dropdown-content a {
+    background-color: lighten($primary, 20%) !important;
   }
 }
 
