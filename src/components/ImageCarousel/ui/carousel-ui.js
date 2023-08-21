@@ -86,17 +86,17 @@ export function togglePalyPause() {
 }
 
 // ######################## AUTO PROGRESSION ########################
-export function clickPlay() {
-  handelAutoAdvance("play");
+export function clickCarouselPlay() {
+  handleAutoAdvance("play");
   const playButton = document.querySelector(".carousel .play-button");
   playButton.classList.toggle("visible");
 
   const pauseButton = document.querySelector(".carousel .pause-button");
   pauseButton.classList.toggle("visible");
 }
-
-export function clickPause() {
-  handelAutoAdvance("pause");
+clickCarouselPlay;
+export function clickCarouselPause() {
+  handleAutoAdvance("pause");
   const playButton = document.querySelector(".carousel .play-button");
   playButton.classList.toggle("visible");
 
@@ -111,7 +111,7 @@ let interval;
  * this function to allow the interval to be created / refenenced
  * @param {string} mode a string containing 'play' or 'pause' to indicate the mode
  */
-function handelAutoAdvance(mode) {
+export function handleAutoAdvance(mode) {
   const playing = mode === "play" ? true : false;
   if (playing) {
     // start an interval timer and capture its reference
