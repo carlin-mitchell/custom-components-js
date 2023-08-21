@@ -310,7 +310,15 @@ $utilities: (
   @extend .flex-layout;
 }
 
-// ********************** Borders ************************
+// *********************** Borders **************************
 .border-none {
   border: none !important;
+}
+
+// ************************* Text ***************************
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-lowercase {
+  text-transform: lowercase;
 }

@@ -34,7 +34,7 @@ const NavBar = () => {
   const nav = Element(
     "nav",
     {
-      className: `container bg-primary flex-column navbar`,
+      className: `container bg-primary flex-column navbar `,
     },
     // nav children
     [

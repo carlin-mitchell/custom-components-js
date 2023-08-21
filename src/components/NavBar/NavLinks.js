@@ -16,7 +16,7 @@ const NavLinks = (isMobileMenu) => {
   const navLinks = Element(
     "ul",
     {
-      className: `container nav-links`,
+      className: `container nav-links text-uppercase`,
     },
     // children
     navLinkElementInfo.map((obj) =>

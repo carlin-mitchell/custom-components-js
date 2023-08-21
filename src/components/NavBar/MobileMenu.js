@@ -15,7 +15,7 @@ const MobileMenu = () => {
     "div",
     {
       id: ``,
-      className: `mobile-menu`,
+      className: `mobile-menu text-uppercase`,
     },
     // children
     [NavLinks(true)]
